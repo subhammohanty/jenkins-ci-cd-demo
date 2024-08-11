@@ -69,6 +69,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>jenkinsCiCd</finalName>
 	</build>
-
 </project>
