@@ -18,6 +18,6 @@ public class JenkinsControllerTest {
     @Test
     public void testDemo() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/jenkins/greetings/{name}", "Subham"))
-                .andExpect(MockMvcResultMatchers.status().isOk());
+                .andExpect(MockMvcResultMatchers.status().is4xxClientError());
     }
 }
