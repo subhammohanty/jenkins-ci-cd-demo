@@ -21,6 +21,19 @@ pipeline {
                 }
             }
         }
-
     }
+    post{
+            always{
+                emailext attachLog: true,
+                body: ''' <html>
+        <body>
+            <p>Build Status: ${BUILD_STATUS}</p>
+            <p>Build Number: ${BUILD_NUMBER}</p>
+            <p>Check the <a href="${BUILD_URL}">console output</a>.</p>
+        </body>
+    </html>''', mimeType: 'text/html', replyTo: 'subhammohanty2511@gmail.com', subject: 'Pipeline Status : ${BUILD_NUMBER}', to: 'subhammohanty2511@gmail.com'
+
+            }
+        }
+
 }
