@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: jenkins-app-container
-          image: jenkins-demo-k8s:2.0
+          image: subhammohanty123/jenkins-k8s-view:1.0.0-1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8082
